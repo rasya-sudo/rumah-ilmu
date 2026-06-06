@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Peradaban Islam Masa Keemasan – Rumah Ilmu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --emerald: #1a6b4a; --emerald-light: #2a8f63;
+      --gold: #c9972b; --gold-light: #f0c060;
+      --cream: #fdf8f0; --cream-dark: #f5edd8;
+      --ink: #1c1a14; --ink-soft: #4a4438; --white: #ffffff;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Nunito', sans-serif; background: var(--cream); color: var(--ink); }
+
+    nav {
+      position: sticky; top: 0; z-index: 100; background: var(--emerald);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5vw; height: 64px; box-shadow: 0 2px 16px rgba(0,0,0,.25);
+    }
+    .nav-logo { font-family: 'Amiri', serif; font-size: 1.5rem; color: var(--gold-light); text-decoration: none; }
+    .nav-logo span { color: rgba(255,255,255,.7); font-family: 'Nunito', sans-serif; font-size: .85rem; display: block; }
+    .nav-back { color: rgba(255,255,255,.8); text-decoration: none; font-size: .9rem; font-weight: 600; }
+    .nav-back:hover { color: var(--gold-light); }
+    .nav-back::before { content: '← '; }
+
+    .hero-article {
+      background: linear-gradient(160deg, #3d2a0d 0%, #7a5120 100%);
+      padding: 5rem 5vw 4rem; text-align: center; position: relative; overflow: hidden;
+    }
+    .hero-article::before {
+      content: 'علم'; position: absolute; font-family: 'Amiri', serif;
+      font-size: 18rem; color: rgba(255,255,255,.04);
+      bottom: -4rem; right: -2rem; line-height: 1;
+    }
+    .article-cat-badge {
+      display: inline-block; background: var(--gold); color: var(--ink);
+      font-size: .75rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+      padding: .3rem .9rem; border-radius: 20px; margin-bottom: 1.5rem;
+    }
+    .hero-article h1 {
+      font-family: 'Amiri', serif; font-size: clamp(2rem, 5vw, 3.5rem);
+      color: var(--white); line-height: 1.2; margin-bottom: 1rem;
+      max-width: 700px; margin-left: auto; margin-right: auto;
+    }
+    .article-meta-bar {
+      color: rgba(255,255,255,.6); font-size: .85rem;
+      display: flex; align-items: center; justify-content: center; gap: 1.5rem; flex-wrap: wrap;
+    }
+
+    .article-container { max-width: 760px; margin: 0 auto; padding: 3.5rem 5vw 5rem; }
+
+    .ayat-box {
+      background: var(--white); border-left: 4px solid var(--emerald);
+      border-radius: 0 12px 12px 0; padding: 1.5rem 1.8rem;
+      margin: 2rem 0; box-shadow: 0 2px 12px rgba(0,0,0,.06);
+    }
+    .ayat-arabic { font-family: 'Amiri', serif; font-size: 1.6rem; color: var(--emerald); direction: rtl; line-height: 2; margin-bottom: .75rem; }
+    .ayat-translation { font-family: 'Lora', serif; font-style: italic; font-size: .95rem; color: var(--ink-soft); line-height: 1.7; margin-bottom: .4rem; }
+    .ayat-source { font-size: .78rem; color: var(--gold); font-weight: 700; }
+
+    .article-body h2 { font-family: 'Amiri', serif; font-size: 1.7rem; color: var(--emerald); margin: 2.5rem 0 1rem; padding-bottom: .5rem; border-bottom: 2px solid var(--cream-dark); }
+    .article-body p { font-family: 'Lora', serif; font-size: 1.02rem; color: var(--ink-soft); line-height: 1.85; margin-bottom: 1.2rem; }
+    .article-body ul { margin: 1rem 0 1.5rem 1.5rem; }
+    .article-body ul li { font-family: 'Lora', serif; font-size: 1rem; color: var(--ink-soft); line-height: 1.75; margin-bottom: .5rem; }
+    .article-body ul li::marker { color: var(--gold); }
+
+    /* Timeline */
+    .timeline { margin: 2rem 0; position: relative; padding-left: 2rem; }
+    .timeline::before { content: ''; position: absolute; left: .6rem; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, var(--emerald), var(--gold)); }
+    .timeline-item { position: relative; margin-bottom: 1.8rem; }
+    .timeline-item::before { content: ''; position: absolute; left: -1.65rem; top: .35rem; width: 12px; height: 12px; border-radius: 50%; background: var(--gold); border: 2px solid var(--white); box-shadow: 0 0 0 2px var(--gold); }
+    .timeline-year { font-family: 'Nunito', sans-serif; font-weight: 700; font-size: .8rem; color: var(--gold); letter-spacing: .08em; margin-bottom: .25rem; }
+    .timeline-title { font-family: 'Lora', serif; font-weight: 600; font-size: 1rem; color: var(--ink); margin-bottom: .3rem; }
+    .timeline-desc { font-family: 'Lora', serif; font-size: .9rem; color: var(--ink-soft); line-height: 1.6; }
+
+    /* Tokoh cards */
+    .tokoh-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+    .tokoh-card { background: var(--white); border: 1px solid rgba(201,151,43,.25); border-radius: 12px; padding: 1.2rem; text-align: center; }
+    .tokoh-icon { font-size: 2rem; margin-bottom: .5rem; }
+    .tokoh-name { font-family: 'Amiri', serif; font-size: 1.1rem; color: var(--emerald); margin-bottom: .25rem; }
+    .tokoh-field { font-size: .8rem; color: var(--gold); font-weight: 700; letter-spacing: .06em; text-transform: uppercase; margin-bottom: .4rem; }
+    .tokoh-desc { font-size: .82rem; color: var(--ink-soft); line-height: 1.5; }
+
+    .highlight-box { background: linear-gradient(135deg, rgba(201,151,43,.1), rgba(26,107,74,.08)); border: 1.5px solid rgba(201,151,43,.3); border-radius: 12px; padding: 1.5rem 1.8rem; margin: 2rem 0; }
+    .highlight-box p { font-family: 'Lora', serif; font-style: italic; font-size: 1.05rem; color: var(--ink); line-height: 1.75; margin: 0; }
+
+    .article-footer { margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--cream-dark); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    .tag { display: inline-block; background: rgba(201,151,43,.12); color: var(--gold); padding: .3rem .8rem; border-radius: 20px; font-size: .78rem; font-weight: 700; margin-right: .4rem; }
+    .btn-back { display: inline-block; background: var(--emerald); color: var(--white); padding: .7rem 1.8rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: .9rem; transition: background .2s, transform .2s; }
+    .btn-back:hover { background: var(--emerald-light); transform: translateY(-2px); }
+
+    footer { background: #1c1a14; color: rgba(255,255,255,.5); text-align: center; padding: 2rem; font-size: .82rem; }
+    footer a { color: var(--gold-light); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">رُوْمَهْ إِلْمُو <span>Rumah Ilmu</span></a>
+  <a class="nav-back" href="index.html">Kembali ke Beranda</a>
+</nav>
+
+<div class="hero-article">
+  <span class="article-cat-badge">Sejarah Islam</span>
+  <h1>Kejayaan Peradaban Islam di Masa Keemasan</h1>
+  <div class="article-meta-bar">
+    <span>📅 1 Juni 2026</span>
+    <span>✍️ Tim Rumah Ilmu</span>
+    <span>⏱️ 7 menit baca</span>
+  </div>
+</div>
+
+<div class="article-container">
+  <div class="article-body">
+
+    <p>Antara abad ke-8 hingga ke-13 Masehi, dunia Islam mengalami masa yang luar biasa dalam sejarah peradaban manusia. Para sejarawan menyebutnya sebagai <strong>The Golden Age of Islam</strong> — masa di mana Baghdad, Cordoba, dan Kairo menjadi pusat ilmu pengetahuan, sains, filsafat, dan budaya yang menerangi seluruh dunia.</p>
+
+    <div class="ayat-box">
+      <p class="ayat-arabic">اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ</p>
+      <p class="ayat-translation">"Bacalah dengan (menyebut) nama Tuhanmu yang menciptakan."</p>
+      <p class="ayat-source">QS. Al-'Alaq: 1 — Ayat pertama yang diturunkan, menjadi fondasi semangat keilmuan Islam</p>
+    </div>
+
+    <h2>Latar Belakang Kemunculan</h2>
+    <p>Masa keemasan Islam tidak muncul tiba-tiba. Fondasi utamanya adalah Al-Qur'an yang menganjurkan manusia untuk membaca, berpikir, dan merenungi ciptaan Allah. Perintah <em>iqra'</em> (bacalah) menjadi semangat yang mendorong umat Islam untuk menuntut ilmu dari mana pun sumbernya.</p>
+    <p>Khalifah Harun Al-Rasyid dan putranya Al-Ma'mun dari Dinasti Abbasiyah mendirikan <strong>Baitul Hikmah</strong> (Rumah Kebijaksanaan) di Baghdad sekitar tahun 830 M. Lembaga ini menjadi pusat penerjemahan, penelitian, dan pengembangan ilmu pengetahuan terbesar di dunia kala itu.</p>
+
+    <h2>Garis Waktu Peristiwa Penting</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-year">762 M</div>
+        <div class="timeline-title">Baghdad Berdiri</div>
+        <div class="timeline-desc">Khalifah Al-Mansur mendirikan Baghdad sebagai ibu kota Abbasiyah yang menjadi pusat peradaban dunia.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">830 M</div>
+        <div class="timeline-title">Baitul Hikmah Didirikan</div>
+        <div class="timeline-desc">Khalifah Al-Ma'mun mendirikan perpustakaan dan lembaga riset terbesar di dunia, menerjemahkan karya-karya Yunani, Persia, dan India.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">980 M</div>
+        <div class="timeline-title">Era Ibnu Sina</div>
+        <div class="timeline-desc">Ibnu Sina menulis Al-Qanun fi al-Tibb, ensiklopedia kedokteran yang menjadi referensi utama selama 600 tahun di Eropa.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">1100 M</div>
+        <div class="timeline-title">Kejayaan Cordoba</div>
+        <div class="timeline-desc">Cordoba, Spanyol Islam, menjadi kota terbesar di Eropa dengan perpustakaan yang memiliki 400.000 manuskrip.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">1258 M</div>
+        <div class="timeline-title">Jatuhnya Baghdad</div>
+        <div class="timeline-desc">Serangan Mongol menghancurkan Baghdad dan Baitul Hikmah, menandai berakhirnya era keemasan Abbasiyah.</div>
+      </div>
+    </div>
+
+    <h2>Tokoh-tokoh Ilmuwan Muslim</h2>
+    <div class="tokoh-grid">
+      <div class="tokoh-card">
+        <div class="tokoh-icon">🏥</div>
+        <div class="tokoh-name">Ibnu Sina</div>
+        <div class="tokoh-field">Kedokteran</div>
+        <div class="tokoh-desc">Dikenal sebagai "Bapak Kedokteran Modern", penulis Al-Qanun fi al-Tibb</div>
+      </div>
+      <div class="tokoh-card">
+        <div class="tokoh-icon">🔢</div>
+        <div class="tokoh-name">Al-Khawarizmi</div>
+        <div class="tokoh-field">Matematika</div>
+        <div class="tokoh-desc">Penemu Aljabar, namanya menjadi asal kata "algorithm"</div>
+      </div>
+      <div class="tokoh-card">
+        <div class="tokoh-icon">🌍</div>
+        <div class="tokoh-name">Al-Idrisi</div>
+        <div class="tokoh-field">Geografi</div>
+        <div class="tokoh-desc">Pembuat peta dunia paling akurat pada zamannya</div>
+      </div>
+      <div class="tokoh-card">
+        <div class="tokoh-icon">🔭</div>
+        <div class="tokoh-name">Ibnu Al-Haytham</div>
+        <div class="tokoh-field">Fisika & Optik</div>
+        <div class="tokoh-desc">Penemu teori cahaya dan penglihatan, pelopor metode ilmiah</div>
+      </div>
+    </div>
+
+    <h2>Warisan untuk Peradaban Dunia</h2>
+    <p>Kontribusi ilmuwan Muslim pada masa keemasan ini sangat besar bagi peradaban modern. Mereka tidak hanya melestarikan ilmu Yunani kuno, tetapi juga mengembangkan dan menemukan hal-hal baru yang menjadi fondasi ilmu pengetahuan modern.</p>
+    <ul>
+      <li>Angka Arab (0-9) yang kita gunakan sehari-hari berasal dari matematikawan Muslim</li>
+      <li>Kata-kata seperti algebra, algorithm, alchemy, alcohol semuanya berasal dari bahasa Arab</li>
+      <li>Rumah sakit modern pertama didirikan di Baghdad pada abad ke-9</li>
+      <li>Universitas pertama di dunia, Al-Qarawiyyin di Maroko, didirikan oleh seorang perempuan Muslim</li>
+    </ul>
+
+    <div class="highlight-box">
+      <p>"Eropa keluar dari Abad Kegelapan justru karena menyerap ilmu dari peradaban Islam. Tanpa masa keemasan Islam, Renaissance Eropa mungkin tidak akan pernah terjadi." — Sejarawan peradaban</p>
+    </div>
+
+    <h2>Pelajaran untuk Umat Islam Hari Ini</h2>
+    <p>Masa keemasan Islam mengajarkan kita bahwa kemajuan sebuah peradaban sangat bergantung pada semangat menuntut ilmu. Ketika umat Islam menjadikan ayat pertama Al-Qur'an sebagai panduan hidup — yaitu membaca, berpikir, dan meneliti — maka kejayaan pun datang.</p>
+    <p>Semoga sejarah gemilang ini menginspirasi kita untuk kembali mencintai ilmu, bersungguh-sungguh dalam belajar, dan menjadikan ilmu sebagai sarana ibadah kepada Allah Subhanahu wa Ta'ala.</p>
+
+  </div>
+
+  <div class="article-footer">
+    <div>
+      <span class="tag">Sejarah Islam</span>
+      <span class="tag">Peradaban</span>
+      <span class="tag">Ilmu Pengetahuan</span>
+    </div>
+    <a href="index.html" class="btn-back">← Kembali ke Beranda</a>
+  </div>
+</div>
+
+<footer>
+  © 2026 <a href="index.html">Rumah Ilmu</a> — Kajian Islam & Edukasi
+</footer>
+
+</body>
+</html>

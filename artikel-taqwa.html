@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Makna Taqwa – Rumah Ilmu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --emerald: #1a6b4a; --emerald-light: #2a8f63;
+      --gold: #c9972b; --gold-light: #f0c060;
+      --cream: #fdf8f0; --cream-dark: #f5edd8;
+      --ink: #1c1a14; --ink-soft: #4a4438; --white: #ffffff;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Nunito', sans-serif; background: var(--cream); color: var(--ink); }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--emerald);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5vw; height: 64px;
+      box-shadow: 0 2px 16px rgba(0,0,0,.25);
+    }
+    .nav-logo { font-family: 'Amiri', serif; font-size: 1.5rem; color: var(--gold-light); text-decoration: none; }
+    .nav-logo span { color: rgba(255,255,255,.7); font-family: 'Nunito', sans-serif; font-size: .85rem; display: block; }
+    .nav-back { color: rgba(255,255,255,.8); text-decoration: none; font-size: .9rem; font-weight: 600; transition: color .2s; }
+    .nav-back:hover { color: var(--gold-light); }
+    .nav-back::before { content: '← '; }
+
+    .hero-article {
+      background: linear-gradient(160deg, #0d3d28 0%, #1a6b4a 100%);
+      padding: 5rem 5vw 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-article::before {
+      content: 'تقوى';
+      position: absolute; font-family: 'Amiri', serif;
+      font-size: 18rem; color: rgba(255,255,255,.04);
+      bottom: -4rem; right: -2rem; line-height: 1;
+    }
+    .article-cat-badge {
+      display: inline-block; background: var(--gold);
+      color: var(--ink); font-size: .75rem; font-weight: 700;
+      letter-spacing: .1em; text-transform: uppercase;
+      padding: .3rem .9rem; border-radius: 20px; margin-bottom: 1.5rem;
+    }
+    .hero-article h1 {
+      font-family: 'Amiri', serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      color: var(--white); line-height: 1.2; margin-bottom: 1rem;
+      max-width: 700px; margin-left: auto; margin-right: auto;
+    }
+    .article-meta-bar {
+      color: rgba(255,255,255,.6); font-size: .85rem;
+      display: flex; align-items: center; justify-content: center; gap: 1.5rem; flex-wrap: wrap;
+    }
+
+    .article-container {
+      max-width: 760px; margin: 0 auto;
+      padding: 3.5rem 5vw 5rem;
+    }
+
+    .ayat-box {
+      background: var(--white);
+      border-left: 4px solid var(--emerald);
+      border-radius: 0 12px 12px 0;
+      padding: 1.5rem 1.8rem;
+      margin: 2rem 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,.06);
+    }
+    .ayat-arabic {
+      font-family: 'Amiri', serif;
+      font-size: 1.6rem; color: var(--emerald);
+      direction: rtl; line-height: 2; margin-bottom: .75rem;
+    }
+    .ayat-translation {
+      font-family: 'Lora', serif; font-style: italic;
+      font-size: .95rem; color: var(--ink-soft); line-height: 1.7;
+      margin-bottom: .4rem;
+    }
+    .ayat-source { font-size: .78rem; color: var(--gold); font-weight: 700; }
+
+    .article-body h2 {
+      font-family: 'Amiri', serif;
+      font-size: 1.7rem; color: var(--emerald);
+      margin: 2.5rem 0 1rem;
+      padding-bottom: .5rem;
+      border-bottom: 2px solid var(--cream-dark);
+    }
+    .article-body p {
+      font-family: 'Lora', serif; font-size: 1.02rem;
+      color: var(--ink-soft); line-height: 1.85;
+      margin-bottom: 1.2rem;
+    }
+    .article-body ul { margin: 1rem 0 1.5rem 1.5rem; }
+    .article-body ul li {
+      font-family: 'Lora', serif; font-size: 1rem;
+      color: var(--ink-soft); line-height: 1.75;
+      margin-bottom: .5rem; padding-left: .5rem;
+    }
+    .article-body ul li::marker { color: var(--emerald); }
+
+    .highlight-box {
+      background: linear-gradient(135deg, rgba(26,107,74,.08), rgba(201,151,43,.08));
+      border: 1.5px solid rgba(26,107,74,.2);
+      border-radius: 12px; padding: 1.5rem 1.8rem;
+      margin: 2rem 0;
+    }
+    .highlight-box p {
+      font-family: 'Lora', serif; font-style: italic;
+      font-size: 1.05rem; color: var(--emerald);
+      line-height: 1.75; margin: 0;
+    }
+
+    .article-footer {
+      margin-top: 3rem; padding-top: 2rem;
+      border-top: 2px solid var(--cream-dark);
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: gap;
+      gap: 1rem;
+    }
+    .tag { display: inline-block; background: rgba(26,107,74,.1); color: var(--emerald);
+      padding: .3rem .8rem; border-radius: 20px; font-size: .78rem; font-weight: 700;
+      margin-right: .4rem; }
+    .btn-back {
+      display: inline-block; background: var(--emerald); color: var(--white);
+      padding: .7rem 1.8rem; border-radius: 8px; text-decoration: none;
+      font-weight: 700; font-size: .9rem; transition: background .2s, transform .2s;
+    }
+    .btn-back:hover { background: var(--emerald-light); transform: translateY(-2px); }
+
+    footer {
+      background: #1c1a14; color: rgba(255,255,255,.5);
+      text-align: center; padding: 2rem;
+      font-size: .82rem;
+    }
+    footer a { color: var(--gold-light); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">رُوْمَهْ إِلْمُو <span>Rumah Ilmu</span></a>
+  <a class="nav-back" href="index.html">Kembali ke Beranda</a>
+</nav>
+
+<div class="hero-article">
+  <span class="article-cat-badge">Akidah</span>
+  <h1>Makna Taqwa dalam Kehidupan Sehari-hari</h1>
+  <div class="article-meta-bar">
+    <span>📅 5 Juni 2026</span>
+    <span>✍️ Tim Rumah Ilmu</span>
+    <span>⏱️ 5 menit baca</span>
+  </div>
+</div>
+
+<div class="article-container">
+  <div class="article-body">
+
+    <p>Taqwa adalah salah satu kata yang paling sering disebut dalam Al-Qur'an. Namun, seberapa dalam kita memahami maknanya? Lebih dari sekadar "takut kepada Allah", taqwa adalah sebuah kondisi hati yang menyeluruh yang membentuk setiap aspek kehidupan seorang Muslim.</p>
+
+    <div class="ayat-box">
+      <p class="ayat-arabic">يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ</p>
+      <p class="ayat-translation">"Wahai orang-orang yang beriman! Bertakwalah kepada Allah sebenar-benar takwa kepada-Nya dan janganlah kamu mati kecuali dalam keadaan Muslim."</p>
+      <p class="ayat-source">QS. Ali Imran: 102</p>
+    </div>
+
+    <h2>Pengertian Taqwa</h2>
+    <p>Secara bahasa, taqwa berasal dari kata <em>waqa-yaqi-wiqayah</em> yang berarti menjaga atau melindungi diri. Dalam istilah syariat, taqwa bermakna menjaga diri dari murka dan siksa Allah dengan cara menjalankan segala perintah-Nya dan menjauhi segala larangan-Nya.</p>
+    <p>Imam Ali bin Abi Thalib radhiyallahu 'anhu pernah mendefinisikan taqwa sebagai: "Takut kepada Allah Yang Maha Agung, mengamalkan Al-Qur'an, ridha dengan yang sedikit, dan bersiap untuk hari keberangkatan (kematian)."</p>
+
+    <h2>Taqwa Bukan Sekadar Rasa Takut</h2>
+    <p>Banyak yang keliru memahami taqwa hanya sebatas rasa takut kepada Allah. Padahal, taqwa memiliki dimensi yang jauh lebih luas. Taqwa mencakup:</p>
+    <ul>
+      <li><strong>Khauf</strong> (rasa takut) — takut akan murka dan azab Allah sehingga mendorong kita menjauhi maksiat</li>
+      <li><strong>Raja'</strong> (harapan) — berharap pada rahmat dan ridha Allah sehingga semangat beramal</li>
+      <li><strong>Mahabbah</strong> (cinta) — mencintai Allah sehingga taat bukan karena terpaksa tapi karena cinta</li>
+      <li><strong>Muraqabah</strong> (merasa diawasi) — selalu merasa diawasi Allah di mana pun berada</li>
+    </ul>
+
+    <h2>Tanda-tanda Orang Bertaqwa</h2>
+    <p>Al-Qur'an dalam Surah Al-Baqarah ayat 2-5 menyebutkan ciri-ciri orang yang bertaqwa, di antaranya:</p>
+    <ul>
+      <li>Beriman kepada yang ghaib</li>
+      <li>Mendirikan shalat</li>
+      <li>Menafkahkan sebagian rezeki di jalan Allah</li>
+      <li>Beriman kepada Al-Qur'an dan kitab-kitab sebelumnya</li>
+      <li>Yakin akan adanya hari akhirat</li>
+    </ul>
+
+    <div class="highlight-box">
+      <p>"Taqwa sejati bukan hanya di masjid atau saat Ramadan, melainkan tercermin dalam kejujuran berbisnis, keadilan dalam keluarga, dan akhlak mulia dalam pergaulan sehari-hari."</p>
+    </div>
+
+    <h2>Cara Meningkatkan Taqwa</h2>
+    <p>Taqwa bukanlah sesuatu yang datang dengan sendirinya, melainkan perlu diusahakan dan dipelihara. Berikut beberapa cara praktis meningkatkan taqwa:</p>
+    <ul>
+      <li>Memperbanyak membaca dan merenungi Al-Qur'an setiap hari</li>
+      <li>Menjaga shalat lima waktu dengan khusyuk dan tepat waktu</li>
+      <li>Memperbanyak dzikir dan istighfar, terutama di pagi dan petang</li>
+      <li>Bergaul dengan orang-orang shalih yang mengingatkan kepada Allah</li>
+      <li>Mempelajari ilmu agama secara rutin dan konsisten</li>
+      <li>Muhasabah (introspeksi diri) setiap malam sebelum tidur</li>
+    </ul>
+
+    <h2>Buah Taqwa dalam Kehidupan</h2>
+    <p>Allah menjanjikan berbagai kebaikan bagi orang-orang yang bertaqwa. Di antaranya Allah akan membukakan jalan keluar dari setiap kesulitan, memberikan rezeki dari arah yang tidak disangka-sangka, memudahkan setiap urusan, dan menghapus kesalahan-kesalahan.</p>
+
+    <div class="ayat-box">
+      <p class="ayat-arabic">وَمَن يَتَّقِ اللَّهَ يَجْعَل لَّهُ مَخْرَجًا ۝ وَيَرْزُقْهُ مِنْ حَيْثُ لَا يَحْتَسِبُ</p>
+      <p class="ayat-translation">"Barangsiapa bertakwa kepada Allah niscaya Dia akan membukakan jalan keluar baginya, dan Dia memberinya rezeki dari arah yang tidak dia duga."</p>
+      <p class="ayat-source">QS. At-Thalaq: 2-3</p>
+    </div>
+
+    <p>Semoga Allah senantiasa meneguhkan hati kita dalam ketaqwaan dan menjadikan kita termasuk golongan orang-orang yang bertaqwa. Aamiin ya Rabbal 'alamin.</p>
+
+  </div>
+
+  <div class="article-footer">
+    <div>
+      <span class="tag">Akidah</span>
+      <span class="tag">Taqwa</span>
+      <span class="tag">Al-Qur'an</span>
+    </div>
+    <a href="index.html" class="btn-back">← Kembali ke Beranda</a>
+  </div>
+</div>
+
+<footer>
+  © 2026 <a href="index.html">Rumah Ilmu</a> — Kajian Islam & Edukasi
+</footer>
+
+</body>
+</html>
