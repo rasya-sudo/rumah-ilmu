@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kajian Fiqih – Rumah Ilmu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--emerald:#1a6b4a;--emerald-light:#2a8f63;--gold:#c9972b;--gold-light:#f0c060;--cream:#fdf8f0;--cream-dark:#f5edd8;--ink:#1c1a14;--ink-soft:#4a4438;--white:#ffffff;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--ink);}
+    nav{position:sticky;top:0;z-index:100;background:var(--emerald);display:flex;align-items:center;justify-content:space-between;padding:0 5vw;height:64px;box-shadow:0 2px 16px rgba(0,0,0,.25);}
+    .nav-logo{font-family:'Amiri',serif;font-size:1.5rem;color:var(--gold-light);text-decoration:none;}
+    .nav-logo span{color:rgba(255,255,255,.7);font-family:'Nunito',sans-serif;font-size:.85rem;display:block;}
+    .nav-back{color:rgba(255,255,255,.8);text-decoration:none;font-size:.9rem;font-weight:600;}
+    .nav-back:hover{color:var(--gold-light);}
+    .nav-back::before{content:'← ';}
+    .hero{background:linear-gradient(160deg,#2d1a00 0%,#7a4a10 100%);padding:5rem 5vw 4rem;text-align:center;position:relative;overflow:hidden;}
+    .hero::before{content:'فقه';position:absolute;font-family:'Amiri',serif;font-size:18rem;color:rgba(255,255,255,.04);bottom:-4rem;right:-2rem;line-height:1;}
+    .badge{display:inline-block;background:var(--gold);color:var(--ink);font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .9rem;border-radius:20px;margin-bottom:1.5rem;}
+    .hero h1{font-family:'Amiri',serif;font-size:clamp(2rem,5vw,3.2rem);color:var(--white);line-height:1.2;margin-bottom:1rem;max-width:700px;margin-left:auto;margin-right:auto;}
+    .meta{color:rgba(255,255,255,.6);font-size:.85rem;display:flex;align-items:center;justify-content:center;gap:1.5rem;}
+    .wrap{max-width:760px;margin:0 auto;padding:3.5rem 5vw 5rem;}
+    .ayat{background:var(--white);border-left:4px solid var(--emerald);border-radius:0 12px 12px 0;padding:1.5rem 1.8rem;margin:2rem 0;box-shadow:0 2px 12px rgba(0,0,0,.06);}
+    .ar{font-family:'Amiri',serif;font-size:1.6rem;color:var(--emerald);direction:rtl;line-height:2;margin-bottom:.75rem;}
+    .tr{font-family:'Lora',serif;font-style:italic;font-size:.95rem;color:var(--ink-soft);line-height:1.7;margin-bottom:.4rem;}
+    .src{font-size:.78rem;color:var(--gold);font-weight:700;}
+    h2{font-family:'Amiri',serif;font-size:1.7rem;color:var(--emerald);margin:2.5rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid var(--cream-dark);}
+    p{font-family:'Lora',serif;font-size:1.02rem;color:var(--ink-soft);line-height:1.85;margin-bottom:1.2rem;}
+    ul{margin:1rem 0 1.5rem 1.5rem;}
+    li{font-family:'Lora',serif;font-size:1rem;color:var(--ink-soft);line-height:1.75;margin-bottom:.5rem;}
+    li::marker{color:var(--emerald);}
+    .hl{background:linear-gradient(135deg,rgba(26,107,74,.08),rgba(201,151,43,.08));border:1.5px solid rgba(26,107,74,.2);border-radius:12px;padding:1.5rem 1.8rem;margin:2rem 0;}
+    .hl p{font-style:italic;color:var(--emerald);margin:0;}
+    .ref{background:var(--cream-dark);border-radius:12px;padding:1.5rem 1.8rem;margin:2.5rem 0;}
+    .ref h3{font-family:'Amiri',serif;font-size:1.3rem;color:var(--emerald);margin-bottom:1rem;}
+    .ref ul{margin-left:1.2rem;}
+    .ref li{font-size:.88rem;font-family:'Nunito',sans-serif;}
+    .foot{margin-top:3rem;padding-top:2rem;border-top:2px solid var(--cream-dark);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+    .tag{display:inline-block;background:rgba(26,107,74,.1);color:var(--emerald);padding:.3rem .8rem;border-radius:20px;font-size:.78rem;font-weight:700;margin-right:.4rem;}
+    .btn{display:inline-block;background:var(--emerald);color:var(--white);padding:.7rem 1.8rem;border-radius:8px;text-decoration:none;font-weight:700;font-size:.9rem;}
+    footer{background:#1c1a14;color:rgba(255,255,255,.5);text-align:center;padding:2rem;font-size:.82rem;}
+    footer a{color:var(--gold-light);text-decoration:none;}
+  </style>
+</head>
+<body>
+<nav><a class="nav-logo" href="index.html">رُوْمَهْ إِلْمُو <span>Rumah Ilmu</span></a><a class="nav-back" href="index.html">Kembali ke Beranda</a></nav>
+<div class="hero">
+  <span class="badge">Kajian Fiqih</span>
+  <h1>Ilmu Fiqih: Definisi, Sumber Hukum, dan Mazhab-mazhab Islam</h1>
+  <div class="meta"><span>✍️ Rumah Ilmu</span><span>⏱️ 8 menit baca</span></div>
+</div>
+<div class="wrap">
+  <h2>Definisi Ilmu Fiqih</h2>
+  <p>Secara bahasa, <strong>fiqih</strong> berarti paham atau mengerti dengan mendalam. Menurut Imam Abu Hanifah, fiqih adalah pengetahuan seseorang tentang hak dan kewajibannya. Adapun ulama ushul mendefinisikannya sebagai ilmu tentang hukum-hukum syariat yang bersifat amaliah (praktis) yang digali dari dalil-dalil yang terperinci.</p>
+  <div class="ayat">
+    <p class="ar">فَلَوْلَا نَفَرَ مِن كُلِّ فِرْقَةٍ مِّنْهُمْ طَائِفَةٌ لِّيَتَفَقَّهُوا فِي الدِّينِ</p>
+    <p class="tr">"Mengapa tidak pergi dari tiap-tiap golongan di antara mereka beberapa orang untuk memperdalam pengetahuan mereka tentang agama..."</p>
+    <p class="src">QS. At-Taubah: 122</p>
+  </div>
+  <h2>Sumber Hukum Islam (Dalil Syar'i)</h2>
+  <ul>
+    <li><strong>Al-Qur'an</strong> — sumber hukum utama dan tertinggi dalam Islam</li>
+    <li><strong>As-Sunnah/Hadits</strong> — perkataan, perbuatan, dan ketetapan Nabi ﷺ</li>
+    <li><strong>Ijma'</strong> — kesepakatan para ulama mujtahid pada suatu masa</li>
+    <li><strong>Qiyas</strong> — analogi hukum kasus baru dengan kasus yang sudah ada nashnya</li>
+  </ul>
+  <h2>Lima Hukum Dasar dalam Fiqih</h2>
+  <ul>
+    <li><strong>Wajib</strong> — harus dikerjakan, jika ditinggalkan berdosa. Contoh: shalat lima waktu, puasa Ramadan</li>
+    <li><strong>Sunnah</strong> — dianjurkan, jika dikerjakan berpahala, jika ditinggalkan tidak berdosa. Contoh: shalat tahajjud</li>
+    <li><strong>Mubah</strong> — boleh dikerjakan atau ditinggalkan. Contoh: makan, minum, tidur</li>
+    <li><strong>Makruh</strong> — sebaiknya ditinggalkan, jika ditinggalkan berpahala. Contoh: makan bawang mentah sebelum shalat</li>
+    <li><strong>Haram</strong> — dilarang keras, jika dikerjakan berdosa. Contoh: riba, zina, mencuri</li>
+  </ul>
+  <h2>Empat Mazhab Fiqih Utama</h2>
+  <ul>
+    <li><strong>Mazhab Hanafi</strong> — didirikan Imam Abu Hanifah (w. 150 H), banyak diikuti di Turki, Asia Tengah, dan Asia Selatan</li>
+    <li><strong>Mazhab Maliki</strong> — didirikan Imam Malik bin Anas (w. 179 H), dominan di Afrika Utara dan Afrika Barat</li>
+    <li><strong>Mazhab Syafi'i</strong> — didirikan Imam Muhammad bin Idris As-Syafi'i (w. 204 H), paling banyak diikuti di Asia Tenggara termasuk Indonesia</li>
+    <li><strong>Mazhab Hanbali</strong> — didirikan Imam Ahmad bin Hanbal (w. 241 H), dominan di Arab Saudi dan Qatar</li>
+  </ul>
+  <div class="hl"><p>"Perbedaan pendapat di antara para ulama fiqih adalah rahmat. Ini menunjukkan luasnya Islam dan kemudahan syariatnya bagi manusia." — Imam As-Suyuthi, Al-Asybah wan Nazha'ir</p></div>
+  <h2>Cabang-cabang Fiqih</h2>
+  <ul>
+    <li><strong>Fiqih Ibadah</strong> — thaharah, shalat, puasa, zakat, haji</li>
+    <li><strong>Fiqih Muamalah</strong> — jual beli, sewa, hutang piutang, koperasi syariah</li>
+    <li><strong>Fiqih Munakahat</strong> — pernikahan, talak, warisan, hak asuh anak</li>
+    <li><strong>Fiqih Jinayat</strong> — hukum pidana Islam, had, qishash, ta'zir</li>
+    <li><strong>Fiqih Siyasah</strong> — hukum tata negara dan politik dalam Islam</li>
+  </ul>
+  <div class="ref">
+    <h3>📚 Referensi</h3>
+    <ul>
+      <li>As-Syafi'i, Muhammad bin Idris. <em>Al-Umm</em>. Dar Al-Ma'rifah, Beirut, 1990.</li>
+      <li>Ibnu Qudamah, Abdullah. <em>Al-Mughni</em>. Maktabah Al-Qahirah, 1968.</li>
+      <li>Az-Zuhaili, Wahbah. <em>Al-Fiqh Al-Islami wa Adillatuh</em>. Dar Al-Fikr, Damaskus, 1989.</li>
+      <li>Sabiq, Sayyid. <em>Fiqhus Sunnah</em>. Dar Al-Fath lil I'lam Al-Arabi, Kairo.</li>
+      <li>Mughniyah, Muhammad Jawad. <em>Al-Fiqh 'ala Al-Madzahib Al-Khamsah</em>. Dar At-Tayyar Al-Jadid, 1989.</li>
+      <li>Djazuli, H.A. <em>Ilmu Fiqh: Penggalian, Perkembangan, dan Penerapan Hukum Islam</em>. Kencana, Jakarta, 2006.</li>
+    </ul>
+  </div>
+  <div class="foot">
+    <div><span class="tag">Fiqih</span><span class="tag">Hukum Islam</span><span class="tag">Mazhab</span></div>
+    <a href="index.html" class="btn">← Kembali ke Beranda</a>
+  </div>
+</div>
+<footer>© 2026 <a href="index.html">Rumah Ilmu</a> — Kajian Islam & Edukasi</footer>
+</body></html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kajian Tafsir – Rumah Ilmu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--emerald:#1a6b4a;--emerald-light:#2a8f63;--gold:#c9972b;--gold-light:#f0c060;--cream:#fdf8f0;--cream-dark:#f5edd8;--ink:#1c1a14;--ink-soft:#4a4438;--white:#ffffff;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--ink);}
+    nav{position:sticky;top:0;z-index:100;background:var(--emerald);display:flex;align-items:center;justify-content:space-between;padding:0 5vw;height:64px;box-shadow:0 2px 16px rgba(0,0,0,.25);}
+    .nav-logo{font-family:'Amiri',serif;font-size:1.5rem;color:var(--gold-light);text-decoration:none;}
+    .nav-logo span{color:rgba(255,255,255,.7);font-family:'Nunito',sans-serif;font-size:.85rem;display:block;}
+    .nav-back{color:rgba(255,255,255,.8);text-decoration:none;font-size:.9rem;font-weight:600;}
+    .nav-back:hover{color:var(--gold-light);}
+    .nav-back::before{content:'← ';}
+    .hero{background:linear-gradient(160deg,#0d3d28 0%,#1a6b4a 100%);padding:5rem 5vw 4rem;text-align:center;position:relative;overflow:hidden;}
+    .hero::before{content:'تفسير';position:absolute;font-family:'Amiri',serif;font-size:18rem;color:rgba(255,255,255,.04);bottom:-4rem;right:-2rem;line-height:1;}
+    .badge{display:inline-block;background:var(--gold);color:var(--ink);font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .9rem;border-radius:20px;margin-bottom:1.5rem;}
+    .hero h1{font-family:'Amiri',serif;font-size:clamp(2rem,5vw,3.2rem);color:var(--white);line-height:1.2;margin-bottom:1rem;max-width:700px;margin-left:auto;margin-right:auto;}
+    .meta{color:rgba(255,255,255,.6);font-size:.85rem;display:flex;align-items:center;justify-content:center;gap:1.5rem;}
+    .wrap{max-width:760px;margin:0 auto;padding:3.5rem 5vw 5rem;}
+    .ayat{background:var(--white);border-left:4px solid var(--emerald);border-radius:0 12px 12px 0;padding:1.5rem 1.8rem;margin:2rem 0;box-shadow:0 2px 12px rgba(0,0,0,.06);}
+    .ar{font-family:'Amiri',serif;font-size:1.6rem;color:var(--emerald);direction:rtl;line-height:2;margin-bottom:.75rem;}
+    .tr{font-family:'Lora',serif;font-style:italic;font-size:.95rem;color:var(--ink-soft);line-height:1.7;margin-bottom:.4rem;}
+    .src{font-size:.78rem;color:var(--gold);font-weight:700;}
+    h2{font-family:'Amiri',serif;font-size:1.7rem;color:var(--emerald);margin:2.5rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid var(--cream-dark);}
+    p{font-family:'Lora',serif;font-size:1.02rem;color:var(--ink-soft);line-height:1.85;margin-bottom:1.2rem;}
+    ul{margin:1rem 0 1.5rem 1.5rem;}
+    li{font-family:'Lora',serif;font-size:1rem;color:var(--ink-soft);line-height:1.75;margin-bottom:.5rem;}
+    li::marker{color:var(--emerald);}
+    .hl{background:linear-gradient(135deg,rgba(26,107,74,.08),rgba(201,151,43,.08));border:1.5px solid rgba(26,107,74,.2);border-radius:12px;padding:1.5rem 1.8rem;margin:2rem 0;}
+    .hl p{font-style:italic;color:var(--emerald);margin:0;}
+    .ref{background:var(--cream-dark);border-radius:12px;padding:1.5rem 1.8rem;margin:2.5rem 0;}
+    .ref h3{font-family:'Amiri',serif;font-size:1.3rem;color:var(--emerald);margin-bottom:1rem;}
+    .ref ul{margin-left:1.2rem;}
+    .ref li{font-size:.88rem;font-family:'Nunito',sans-serif;}
+    .foot{margin-top:3rem;padding-top:2rem;border-top:2px solid var(--cream-dark);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+    .tag{display:inline-block;background:rgba(26,107,74,.1);color:var(--emerald);padding:.3rem .8rem;border-radius:20px;font-size:.78rem;font-weight:700;margin-right:.4rem;}
+    .btn{display:inline-block;background:var(--emerald);color:var(--white);padding:.7rem 1.8rem;border-radius:8px;text-decoration:none;font-weight:700;font-size:.9rem;}
+    footer{background:#1c1a14;color:rgba(255,255,255,.5);text-align:center;padding:2rem;font-size:.82rem;}
+    footer a{color:var(--gold-light);text-decoration:none;}
+  </style>
+</head>
+<body>
+<nav><a class="nav-logo" href="index.html">رُوْمَهْ إِلْمُو <span>Rumah Ilmu</span></a><a class="nav-back" href="index.html">Kembali ke Beranda</a></nav>
+<div class="hero">
+  <span class="badge">Kajian Tafsir</span>
+  <h1>Ilmu Tafsir Al-Qur'an: Definisi, Sejarah, dan Metodenya</h1>
+  <div class="meta"><span>✍️ Rumah Ilmu</span><span>⏱️ 7 menit baca</span></div>
+</div>
+<div class="wrap">
+  <h2>Definisi Ilmu Tafsir</h2>
+  <p>Secara bahasa, <strong>tafsir</strong> berasal dari kata <em>fassara</em> yang berarti menjelaskan dan menyingkap makna. Imam Az-Zarkasyi dalam kitab <em>Al-Burhan fi Ulumil Qur'an</em> mendefinisikannya sebagai ilmu untuk memahami Kitabullah, menjelaskan maknanya, serta mengeluarkan hukum dan hikmah yang terkandung di dalamnya.</p>
+  <div class="ayat">
+    <p class="ar">إِنَّا نَحْنُ نَزَّلْنَا الذِّكْرَ وَإِنَّا لَهُ لَحَافِظُونَ</p>
+    <p class="tr">"Sesungguhnya Kami-lah yang menurunkan Al-Qur'an, dan pasti Kami (pula) yang memeliharanya."</p>
+    <p class="src">QS. Al-Hijr: 9</p>
+  </div>
+  <h2>Sejarah Singkat Ilmu Tafsir</h2>
+  <p>Tafsir dimulai sejak zaman Nabi ﷺ sebagai mufassir pertama. Setelah beliau wafat, para sahabat seperti Ibnu Abbas, Ibnu Mas'ud, dan Ali bin Abi Thalib meneruskan tradisi ini. Ibnu Abbas dikenal sebagai <em>Turjumanul Qur'an</em> (Juru Tafsir Al-Qur'an) karena kedalaman ilmunya. Rasulullah ﷺ pernah mendoakannya: "Ya Allah, pahamkanlah ia dalam agama dan ajarilah ia takwil." (HR. Bukhari No. 143)</p>
+  <h2>Macam-macam Metode Tafsir</h2>
+  <ul>
+    <li><strong>Tafsir bil Ma'tsur</strong> — menafsirkan Al-Qur'an dengan Al-Qur'an, Hadits, atau pendapat sahabat. Contoh: Tafsir Ibnu Katsir.</li>
+    <li><strong>Tafsir bir Ra'yi</strong> — menafsirkan dengan ijtihad dan akal berlandaskan kaidah bahasa Arab. Contoh: Tafsir Al-Kasysyaf (Az-Zamakhsyari).</li>
+    <li><strong>Tafsir Maudhu'i (Tematik)</strong> — mengumpulkan semua ayat tentang satu tema lalu ditafsirkan secara terpadu. Banyak dikembangkan ulama modern.</li>
+    <li><strong>Tafsir Isyari</strong> — menafsirkan berdasarkan isyarat batin yang diperoleh melalui riyadhah, digunakan kalangan sufi.</li>
+  </ul>
+  <h2>Kitab-kitab Tafsir Terkemuka</h2>
+  <ul>
+    <li><strong>Tafsir Ibnu Katsir</strong> — Imam Ibnu Katsir (w. 774 H), rujukan utama tafsir bil ma'tsur di seluruh dunia Islam.</li>
+    <li><strong>Jami' al-Bayan</strong> — Imam Ath-Thabari (w. 310 H), ensiklopedia tafsir terlengkap dari ulama salaf.</li>
+    <li><strong>Al-Jami' li Ahkamil Qur'an</strong> — Imam Al-Qurthubi (w. 671 H), unggul dalam penjelasan hukum fiqih dari ayat Al-Qur'an.</li>
+    <li><strong>Tafsir Al-Azhar</strong> — Prof. Dr. Hamka (w. 1981 M), tafsir berbahasa Indonesia karya ulama Nusantara terkemuka.</li>
+    <li><strong>Tafsir Al-Misbah</strong> — Prof. Dr. M. Quraish Shihab, tafsir kontemporer berbahasa Indonesia yang sangat populer.</li>
+  </ul>
+  <div class="hl"><p>"Al-Qur'an adalah lautan ilmu yang tidak bertepi. Tafsir bukan sekadar terjemahan, melainkan upaya sungguh-sungguh memahami kehendak Allah." — Prof. Dr. M. Quraish Shihab, Tafsir Al-Misbah</p></div>
+  <h2>Syarat Menafsirkan Al-Qur'an</h2>
+  <ul>
+    <li>Menguasai bahasa Arab: nahwu, sharaf, dan balaghah</li>
+    <li>Memahami Asbabun Nuzul (sebab turunnya ayat)</li>
+    <li>Menguasai ilmu Nasikh dan Mansukh</li>
+    <li>Memahami ilmu Ushul Fiqih dan kaidah hukum Islam</li>
+    <li>Memiliki akidah yang lurus dan akhlak yang mulia</li>
+  </ul>
+  <div class="ref">
+    <h3>📚 Referensi</h3>
+    <ul>
+      <li>Az-Zarkasyi, Badruddin. <em>Al-Burhan fi Ulumil Qur'an</em>. Dar Ihya Al-Kutub Al-Arabiyyah, 1957.</li>
+      <li>As-Suyuthi, Jalaluddin. <em>Al-Itqan fi Ulumil Qur'an</em>. Maktabah Nizar Musthafa Al-Baz.</li>
+      <li>Ibnu Katsir, Ismail. <em>Tafsir Al-Qur'an Al-Azhim</em>. Dar Thaybah, 1999.</li>
+      <li>Shihab, M. Quraish. <em>Tafsir Al-Misbah</em>. Lentera Hati, Jakarta, 2002.</li>
+      <li>Al-Qattan, Manna'. <em>Mabahits fi Ulumil Qur'an</em>. Maktabah Al-Ma'arif, 2000.</li>
+      <li>Hamka. <em>Tafsir Al-Azhar</em>. Pustaka Nasional Pte Ltd, Singapura, 1982.</li>
+    </ul>
+  </div>
+  <div class="foot">
+    <div><span class="tag">Tafsir</span><span class="tag">Al-Qur'an</span><span class="tag">Ulumul Qur'an</span></div>
+    <a href="index.html" class="btn">← Kembali ke Beranda</a>
+  </div>
+</div>
+<footer>© 2026 <a href="index.html">Rumah Ilmu</a> — Kajian Islam & Edukasi</footer>
+</body></html>

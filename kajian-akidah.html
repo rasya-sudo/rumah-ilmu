@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kajian Akidah – Rumah Ilmu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--emerald:#1a6b4a;--emerald-light:#2a8f63;--gold:#c9972b;--gold-light:#f0c060;--cream:#fdf8f0;--cream-dark:#f5edd8;--ink:#1c1a14;--ink-soft:#4a4438;--white:#ffffff;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--ink);}
+    nav{position:sticky;top:0;z-index:100;background:var(--emerald);display:flex;align-items:center;justify-content:space-between;padding:0 5vw;height:64px;box-shadow:0 2px 16px rgba(0,0,0,.25);}
+    .nav-logo{font-family:'Amiri',serif;font-size:1.5rem;color:var(--gold-light);text-decoration:none;}
+    .nav-logo span{color:rgba(255,255,255,.7);font-family:'Nunito',sans-serif;font-size:.85rem;display:block;}
+    .nav-back{color:rgba(255,255,255,.8);text-decoration:none;font-size:.9rem;font-weight:600;}
+    .nav-back:hover{color:var(--gold-light);}
+    .nav-back::before{content:'← ';}
+    .hero{background:linear-gradient(160deg,#1a0a3d 0%,#3d1a7a 100%);padding:5rem 5vw 4rem;text-align:center;position:relative;overflow:hidden;}
+    .hero::before{content:'عقيدة';position:absolute;font-family:'Amiri',serif;font-size:14rem;color:rgba(255,255,255,.04);bottom:-4rem;right:-2rem;line-height:1;}
+    .badge{display:inline-block;background:var(--gold);color:var(--ink);font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .9rem;border-radius:20px;margin-bottom:1.5rem;}
+    .hero h1{font-family:'Amiri',serif;font-size:clamp(2rem,5vw,3.2rem);color:var(--white);line-height:1.2;margin-bottom:1rem;max-width:700px;margin-left:auto;margin-right:auto;}
+    .meta{color:rgba(255,255,255,.6);font-size:.85rem;display:flex;align-items:center;justify-content:center;gap:1.5rem;}
+    .wrap{max-width:760px;margin:0 auto;padding:3.5rem 5vw 5rem;}
+    .ayat{background:var(--white);border-left:4px solid var(--emerald);border-radius:0 12px 12px 0;padding:1.5rem 1.8rem;margin:2rem 0;box-shadow:0 2px 12px rgba(0,0,0,.06);}
+    .ar{font-family:'Amiri',serif;font-size:1.6rem;color:var(--emerald);direction:rtl;line-height:2;margin-bottom:.75rem;}
+    .tr{font-family:'Lora',serif;font-style:italic;font-size:.95rem;color:var(--ink-soft);line-height:1.7;margin-bottom:.4rem;}
+    .src{font-size:.78rem;color:var(--gold);font-weight:700;}
+    h2{font-family:'Amiri',serif;font-size:1.7rem;color:var(--emerald);margin:2.5rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid var(--cream-dark);}
+    p{font-family:'Lora',serif;font-size:1.02rem;color:var(--ink-soft);line-height:1.85;margin-bottom:1.2rem;}
+    ul{margin:1rem 0 1.5rem 1.5rem;}
+    li{font-family:'Lora',serif;font-size:1rem;color:var(--ink-soft);line-height:1.75;margin-bottom:.5rem;}
+    li::marker{color:var(--emerald);}
+    .hl{background:linear-gradient(135deg,rgba(26,107,74,.08),rgba(201,151,43,.08));border:1.5px solid rgba(26,107,74,.2);border-radius:12px;padding:1.5rem 1.8rem;margin:2rem 0;}
+    .hl p{font-style:italic;color:var(--emerald);margin:0;}
+    .ref{background:var(--cream-dark);border-radius:12px;padding:1.5rem 1.8rem;margin:2.5rem 0;}
+    .ref h3{font-family:'Amiri',serif;font-size:1.3rem;color:var(--emerald);margin-bottom:1rem;}
+    .ref ul{margin-left:1.2rem;}
+    .ref li{font-size:.88rem;font-family:'Nunito',sans-serif;}
+    .foot{margin-top:3rem;padding-top:2rem;border-top:2px solid var(--cream-dark);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+    .tag{display:inline-block;background:rgba(26,107,74,.1);color:var(--emerald);padding:.3rem .8rem;border-radius:20px;font-size:.78rem;font-weight:700;margin-right:.4rem;}
+    .btn{display:inline-block;background:var(--emerald);color:var(--white);padding:.7rem 1.8rem;border-radius:8px;text-decoration:none;font-weight:700;font-size:.9rem;}
+    footer{background:#1c1a14;color:rgba(255,255,255,.5);text-align:center;padding:2rem;font-size:.82rem;}
+    footer a{color:var(--gold-light);text-decoration:none;}
+  </style>
+</head>
+<body>
+<nav><a class="nav-logo" href="index.html">رُوْمَهْ إِلْمُو <span>Rumah Ilmu</span></a><a class="nav-back" href="index.html">Kembali ke Beranda</a></nav>
+<div class="hero">
+  <span class="badge">Kajian Akidah</span>
+  <h1>Ilmu Akidah Islam: Rukun Iman dan Pokok-pokok Keyakinan</h1>
+  <div class="meta"><span>✍️ Rumah Ilmu</span><span>⏱️ 7 menit baca</span></div>
+</div>
+<div class="wrap">
+  <h2>Definisi Akidah</h2>
+  <p>Secara bahasa, <strong>akidah</strong> berasal dari kata <em>'aqada</em> yang berarti mengikat atau mengukuhkan. Dalam istilah syariat, akidah adalah keyakinan yang kuat dan pasti yang tertancap dalam hati, tidak ada keraguan sedikitpun bagi orang yang meyakininya. Akidah Islam adalah pondasi agama yang di atasnya dibangun seluruh amal ibadah seorang Muslim.</p>
+  <p>Syaikh Muhammad bin Shalih Al-Utsaimin mendefinisikan: "Akidah adalah perkara-perkara yang dibenarkan hati dan jiwa merasa tenteram karenanya, sehingga menjadi keyakinan kokoh tanpa ada keraguan dan kebimbangan."</p>
+  <div class="ayat">
+    <p class="ar">آمَنَ الرَّسُولُ بِمَا أُنزِلَ إِلَيْهِ مِن رَّبِّهِ وَالْمُؤْمِنُونَ ۚ كُلٌّ آمَنَ بِاللَّهِ وَمَلَائِكَتِهِ وَكُتُبِهِ وَرُسُلِهِ</p>
+    <p class="tr">"Rasul (Muhammad) beriman kepada apa yang diturunkan kepadanya dari Tuhannya, demikian pula orang-orang yang beriman. Semua beriman kepada Allah, malaikat-malaikat-Nya, kitab-kitab-Nya, dan rasul-rasul-Nya."</p>
+    <p class="src">QS. Al-Baqarah: 285</p>
+  </div>
+  <h2>Enam Rukun Iman</h2>
+  <ul>
+    <li><strong>Iman kepada Allah</strong> — meyakini keesaan Allah dalam Dzat, sifat, dan perbuatan-Nya (Tauhid Rububiyah, Uluhiyah, dan Asma wa Sifat)</li>
+    <li><strong>Iman kepada Malaikat</strong> — meyakini adanya malaikat yang diciptakan dari cahaya, selalu taat kepada Allah</li>
+    <li><strong>Iman kepada Kitab-kitab Allah</strong> — meyakini semua kitab yang diturunkan Allah, dengan Al-Qur'an sebagai penyempurna</li>
+    <li><strong>Iman kepada Para Rasul</strong> — meyakini semua nabi dan rasul, dengan Muhammad ﷺ sebagai penutup para nabi</li>
+    <li><strong>Iman kepada Hari Akhir</strong> — meyakini kiamat, kebangkitan, hisab, surga, dan neraka</li>
+    <li><strong>Iman kepada Qada dan Qadar</strong> — meyakini semua yang terjadi atas kehendak dan ketetapan Allah</li>
+  </ul>
+  <h2>Tiga Landasan Akidah (Ushul Tsalatsah)</h2>
+  <p>Syaikh Muhammad bin Abdul Wahhab dalam kitab <em>Al-Ushul Ats-Tsalatsah</em> menyebutkan tiga pertanyaan pokok yang harus dijawab setiap Muslim:</p>
+  <ul>
+    <li><strong>Man Rabbuka?</strong> (Siapa Tuhanmu?) — Allah, Rabb semesta alam</li>
+    <li><strong>Ma Dinuka?</strong> (Apa agamamu?) — Islam, agama yang diridhoi Allah</li>
+    <li><strong>Man Nabiyyuka?</strong> (Siapa nabimu?) — Muhammad ﷺ, utusan Allah untuk seluruh manusia</li>
+  </ul>
+  <div class="hl"><p>"Akidah adalah ruh bagi tubuh Islam. Jika akidah rusak, maka seluruh amalan menjadi sia-sia. Dan jika akidah lurus, maka Allah akan menerima amal dan memberikan keberkahan hidup." — Syaikh Muhammad bin Shalih Al-Utsaimin, Syarh Al-Aqidah Al-Wasithiyah</p></div>
+  <h2>Kitab-kitab Akidah Terpenting</h2>
+  <ul>
+    <li><strong>Al-Aqidah Al-Wasithiyah</strong> — Syaikhul Islam Ibnu Taimiyah (w. 728 H), ringkasan akidah Ahlus Sunnah yang sangat terkenal</li>
+    <li><strong>Al-Ushul Ats-Tsalatsah</strong> — Syaikh Muhammad bin Abdul Wahhab, panduan dasar akidah yang wajib dipelajari</li>
+    <li><strong>Lum'atul I'tiqad</strong> — Imam Ibnu Qudamah (w. 620 H), penjelasan ringkas akidah Ahlus Sunnah wal Jama'ah</li>
+    <li><strong>Syarh Al-Aqidah Ath-Thahawiyah</strong> — Ibnu Abil Izz Al-Hanafi, syarah kitab akidah Imam Ath-Thahawi</li>
+    <li><strong>Kitab At-Tauhid</strong> — Syaikh Muhammad bin Abdul Wahhab, membahas tauhid secara komprehensif</li>
+  </ul>
+  <div class="ref">
+    <h3>📚 Referensi</h3>
+    <ul>
+      <li>Ibnu Taimiyah, Ahmad. <em>Al-Aqidah Al-Wasithiyah</em>. Maktabah Al-Islamiyah, Beirut.</li>
+      <li>Al-Utsaimin, Muhammad bin Shalih. <em>Syarh Al-Aqidah Al-Wasithiyah</em>. Dar Ibnul Jauzi, 1994.</li>
+      <li>Ibnu Abdul Wahhab, Muhammad. <em>Al-Ushul Ats-Tsalatsah</em>. Dar As-Salam, Riyadh.</li>
+      <li>Al-Fauzan, Shalih bin Fauzan. <em>Kitab At-Tauhid</em>. Dar Al-Aqidah, Kairo.</li>
+      <li>Yazid, Abu Umar. <em>Akidah Imam Empat Mazhab</em>. Pustaka Imam Syafi'i, Jakarta, 2010.</li>
+      <li>Hasan, Ali. <em>Pengantar Ilmu Tauhid</em>. Raja Grafindo Persada, Jakarta, 2000.</li>
+    </ul>
+  </div>
+  <div class="foot">
+    <div><span class="tag">Akidah</span><span class="tag">Tauhid</span><span class="tag">Rukun Iman</span></div>
+    <a href="index.html" class="btn">← Kembali ke Beranda</a>
+  </div>
+</div>
+<footer>© 2026 <a href="index.html">Rumah Ilmu</a> — Kajian Islam & Edukasi</footer>
+</body></html>

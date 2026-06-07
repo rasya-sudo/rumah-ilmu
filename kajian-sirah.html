@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kajian Sirah – Rumah Ilmu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--emerald:#1a6b4a;--emerald-light:#2a8f63;--gold:#c9972b;--gold-light:#f0c060;--cream:#fdf8f0;--cream-dark:#f5edd8;--ink:#1c1a14;--ink-soft:#4a4438;--white:#ffffff;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--ink);}
+    nav{position:sticky;top:0;z-index:100;background:var(--emerald);display:flex;align-items:center;justify-content:space-between;padding:0 5vw;height:64px;box-shadow:0 2px 16px rgba(0,0,0,.25);}
+    .nav-logo{font-family:'Amiri',serif;font-size:1.5rem;color:var(--gold-light);text-decoration:none;}
+    .nav-logo span{color:rgba(255,255,255,.7);font-family:'Nunito',sans-serif;font-size:.85rem;display:block;}
+    .nav-back{color:rgba(255,255,255,.8);text-decoration:none;font-size:.9rem;font-weight:600;}
+    .nav-back:hover{color:var(--gold-light);}
+    .nav-back::before{content:'← ';}
+    .hero{background:linear-gradient(160deg,#3d2a0d 0%,#7a5c20 100%);padding:5rem 5vw 4rem;text-align:center;position:relative;overflow:hidden;}
+    .hero::before{content:'سيرة';position:absolute;font-family:'Amiri',serif;font-size:16rem;color:rgba(255,255,255,.04);bottom:-4rem;right:-2rem;line-height:1;}
+    .badge{display:inline-block;background:var(--gold);color:var(--ink);font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .9rem;border-radius:20px;margin-bottom:1.5rem;}
+    .hero h1{font-family:'Amiri',serif;font-size:clamp(2rem,5vw,3.2rem);color:var(--white);line-height:1.2;margin-bottom:1rem;max-width:700px;margin-left:auto;margin-right:auto;}
+    .meta{color:rgba(255,255,255,.6);font-size:.85rem;display:flex;align-items:center;justify-content:center;gap:1.5rem;}
+    .wrap{max-width:760px;margin:0 auto;padding:3.5rem 5vw 5rem;}
+    .ayat{background:var(--white);border-left:4px solid var(--emerald);border-radius:0 12px 12px 0;padding:1.5rem 1.8rem;margin:2rem 0;box-shadow:0 2px 12px rgba(0,0,0,.06);}
+    .ar{font-family:'Amiri',serif;font-size:1.6rem;color:var(--emerald);direction:rtl;line-height:2;margin-bottom:.75rem;}
+    .tr{font-family:'Lora',serif;font-style:italic;font-size:.95rem;color:var(--ink-soft);line-height:1.7;margin-bottom:.4rem;}
+    .src{font-size:.78rem;color:var(--gold);font-weight:700;}
+    h2{font-family:'Amiri',serif;font-size:1.7rem;color:var(--emerald);margin:2.5rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid var(--cream-dark);}
+    p{font-family:'Lora',serif;font-size:1.02rem;color:var(--ink-soft);line-height:1.85;margin-bottom:1.2rem;}
+    ul{margin:1rem 0 1.5rem 1.5rem;}
+    li{font-family:'Lora',serif;font-size:1rem;color:var(--ink-soft);line-height:1.75;margin-bottom:.5rem;}
+    li::marker{color:var(--gold);}
+    .timeline{margin:2rem 0;position:relative;padding-left:2rem;}
+    .timeline::before{content:'';position:absolute;left:.6rem;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--emerald),var(--gold));}
+    .tl-item{position:relative;margin-bottom:1.8rem;}
+    .tl-item::before{content:'';position:absolute;left:-1.65rem;top:.35rem;width:12px;height:12px;border-radius:50%;background:var(--gold);border:2px solid var(--white);box-shadow:0 0 0 2px var(--gold);}
+    .tl-year{font-family:'Nunito',sans-serif;font-weight:700;font-size:.8rem;color:var(--gold);letter-spacing:.08em;margin-bottom:.25rem;}
+    .tl-title{font-family:'Lora',serif;font-weight:600;font-size:1rem;color:var(--ink);margin-bottom:.3rem;}
+    .tl-desc{font-family:'Lora',serif;font-size:.9rem;color:var(--ink-soft);line-height:1.6;}
+    .hl{background:linear-gradient(135deg,rgba(26,107,74,.08),rgba(201,151,43,.08));border:1.5px solid rgba(26,107,74,.2);border-radius:12px;padding:1.5rem 1.8rem;margin:2rem 0;}
+    .hl p{font-style:italic;color:var(--emerald);margin:0;}
+    .ref{background:var(--cream-dark);border-radius:12px;padding:1.5rem 1.8rem;margin:2.5rem 0;}
+    .ref h3{font-family:'Amiri',serif;font-size:1.3rem;color:var(--emerald);margin-bottom:1rem;}
+    .ref ul{margin-left:1.2rem;}
+    .ref li{font-size:.88rem;font-family:'Nunito',sans-serif;}
+    .foot{margin-top:3rem;padding-top:2rem;border-top:2px solid var(--cream-dark);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+    .tag{display:inline-block;background:rgba(26,107,74,.1);color:var(--emerald);padding:.3rem .8rem;border-radius:20px;font-size:.78rem;font-weight:700;margin-right:.4rem;}
+    .btn{display:inline-block;background:var(--emerald);color:var(--white);padding:.7rem 1.8rem;border-radius:8px;text-decoration:none;font-weight:700;font-size:.9rem;}
+    footer{background:#1c1a14;color:rgba(255,255,255,.5);text-align:center;padding:2rem;font-size:.82rem;}
+    footer a{color:var(--gold-light);text-decoration:none;}
+  </style>
+</head>
+<body>
+<nav><a class="nav-logo" href="index.html">رُوْمَهْ إِلْمُو <span>Rumah Ilmu</span></a><a class="nav-back" href="index.html">Kembali ke Beranda</a></nav>
+<div class="hero">
+  <span class="badge">Kajian Sirah</span>
+  <h1>Sirah Nabawiyah: Mempelajari Perjalanan Hidup Nabi Muhammad ﷺ</h1>
+  <div class="meta"><span>✍️ Rumah Ilmu</span><span>⏱️ 8 menit baca</span></div>
+</div>
+<div class="wrap">
+  <h2>Definisi Sirah Nabawiyah</h2>
+  <p><strong>Sirah Nabawiyah</strong> secara bahasa berarti perjalanan hidup Nabi. Secara istilah, sirah adalah ilmu yang mempelajari seluruh aspek kehidupan Nabi Muhammad ﷺ: kelahiran, nasab, pertumbuhan, perjuangan dakwah, peperangan, akhlak, hingga wafat beliau. Mempelajari sirah adalah kewajiban setiap Muslim karena Allah memerintahkan kita meneladani Rasulullah ﷺ.</p>
+  <div class="ayat">
+    <p class="ar">لَّقَدْ كَانَ لَكُمْ فِي رَسُولِ اللَّهِ أُسْوَةٌ حَسَنَةٌ لِّمَن كَانَ يَرْجُو اللَّهَ وَالْيَوْمَ الْآخِرَ</p>
+    <p class="tr">"Sungguh, telah ada pada (diri) Rasulullah itu suri teladan yang baik bagimu, yaitu bagi orang yang mengharap (rahmat) Allah dan (kedatangan) hari Kiamat."</p>
+    <p class="src">QS. Al-Ahzab: 21</p>
+  </div>
+  <h2>Garis Waktu Kehidupan Nabi ﷺ</h2>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-year">570 M — Tahun Gajah</div>
+      <div class="tl-title">Kelahiran Nabi Muhammad ﷺ</div>
+      <div class="tl-desc">Lahir di Makkah pada 12 Rabi'ul Awwal, dari ayah Abdullah dan ibu Aminah binti Wahb.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">610 M — Usia 40 tahun</div>
+      <div class="tl-title">Wahyu Pertama di Gua Hira</div>
+      <div class="tl-desc">Turunnya surah Al-Alaq ayat 1-5, menandai dimulainya kenabian Muhammad ﷺ.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">613 M</div>
+      <div class="tl-title">Dakwah Terang-terangan</div>
+      <div class="tl-desc">Nabi ﷺ mulai berdakwah secara terbuka setelah tiga tahun dakwah secara rahasia.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">622 M</div>
+      <div class="tl-title">Hijrah ke Madinah</div>
+      <div class="tl-desc">Peristiwa hijrah yang menjadi titik tolak kalender Islam (Hijriyah) dan babak baru peradaban Islam.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">624 M</div>
+      <div class="tl-title">Perang Badar</div>
+      <div class="tl-desc">Kemenangan besar pertama kaum Muslimin melawan pasukan Quraisy yang jauh lebih besar.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">630 M</div>
+      <div class="tl-title">Fathu Makkah</div>
+      <div class="tl-desc">Pembukaan kota Makkah tanpa pertumpahan darah, puncak kejayaan dakwah Nabi ﷺ.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">632 M</div>
+      <div class="tl-title">Haji Wada' dan Wafatnya Nabi ﷺ</div>
+      <div class="tl-desc">Haji terakhir Nabi ﷺ, menyampaikan khutbah perpisahan, lalu wafat di Madinah pada 12 Rabi'ul Awwal.</div>
+    </div>
+  </div>
+  <div class="hl"><p>"Siapa yang ingin mencintai Allah dan Rasul-Nya, dan ingin dicintai Allah dan Rasul-Nya, maka hendaklah ia membaca sirah Nabi ﷺ." — Imam Ibnu Katsir, Al-Bidayah wan Nihayah</p></div>
+  <h2>Kitab-kitab Sirah Nabawiyah Terpenting</h2>
+  <ul>
+    <li><strong>Sirah Ibnu Hisyam</strong> — Ibnu Hisyam (w. 218 H), kitab sirah paling populer dan terpercaya, ringkasan dari sirah Ibnu Ishaq</li>
+    <li><strong>Al-Bidayah wan Nihayah</strong> — Imam Ibnu Katsir (w. 774 H), sejarah Islam dari penciptaan hingga masa beliau</li>
+    <li><strong>Zaadul Ma'ad</strong> — Imam Ibnul Qayyim (w. 751 H), sirah sekaligus panduan fiqih dari kehidupan Nabi ﷺ</li>
+    <li><strong>Ar-Rahiq Al-Makhtum</strong> — Syaikh Shafiyyurrahman Al-Mubarakfuri, pemenang lomba sirah Rabithah Alam Islami 1979</li>
+    <li><strong>Fiqhus Sirah</strong> — Dr. Muhammad Said Ramadhan Al-Buthi, sirah dengan pendekatan fiqih dan hikmah</li>
+    <li><strong>Muhammad Sang Nabi</strong> — Karen Armstrong (perspektif sejarawan Barat yang objektif)</li>
+  </ul>
+  <div class="ref">
+    <h3>📚 Referensi</h3>
+    <ul>
+      <li>Ibnu Hisyam, Abdulmalik. <em>As-Sirah An-Nabawiyah</em>. Dar Al-Kutub Al-Ilmiyah, Beirut, 1971.</li>
+      <li>Al-Mubarakfuri, Shafiyyurrahman. <em>Ar-Rahiq Al-Makhtum</em>. Dar Al-Wafa, Mesir, 2008.</li>
+      <li>Ibnul Qayyim, Muhammad. <em>Zaadul Ma'ad fi Hadyi Khairil Ibad</em>. Mu'assasah Ar-Risalah, Beirut, 1994.</li>
+      <li>Al-Buthi, Muhammad Said Ramadhan. <em>Fiqhus Sirah</em>. Dar Al-Fikr, Damaskus, 1991.</li>
+      <li>Haekal, Muhammad Husein. <em>Hayatu Muhammad</em>. Dar Al-Ma'arif, Kairo, 1977. (Terj. Indonesia: Sejarah Hidup Muhammad, Litera AntarNusa)</li>
+      <li>Al-Ghazali, Muhammad. <em>Fiqhus Sirah</em>. Dar Ad-Da'wah, 1989.</li>
+    </ul>
+  </div>
+  <div class="foot">
+    <div><span class="tag">Sirah</span><span class="tag">Sejarah Islam</span><span class="tag">Nabi Muhammad</span></div>
+    <a href="index.html" class="btn">← Kembali ke Beranda</a>
+  </div>
+</div>
+<footer>© 2026 <a href="index.html">Rumah Ilmu</a> — Kajian Islam & Edukasi</footer>
+</body></html>
